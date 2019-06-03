@@ -1,0 +1,25 @@
+$default-branding: (
+  background: (
+    accent: rgb(0, 0, 0),
+    accent-hover:  rgb(240, 134, 99),
+    attention: rgb(255, 82, 82),
+    attention-hover: rgb(255, 82, 82),
+    primary: rgb(245, 176, 80),
+    secondary: rgb(255, 255, 255),
+    quaternary: rgb(238, 238, 238),
+    tertiary: rgb(189, 215, 199),
+    widget-box-shadow: rgb(129, 138, 145),
+    widget-overlay: rgba(255, 255, 255, 0.60),
+    trasparent-element: rgb(238, 238, 238)
+  ),
+  text: (
+    accent: rgb(245, 176, 80),
+    attention: rgb(255, 82, 82),
+    primary: rgb(0, 0, 0),
+    secondary: rgb(255, 255, 255),
+  )
+);
+
+@function get-color($type, $color) {
+  @return map-get(map-get($default-branding,  $type), $color);
+}

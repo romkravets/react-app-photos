@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    &:active, &:hover, &:focus {
+      outline: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+  }
+
+html {
+  height: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Bariol', sans-serif;
+  font-weight: 400;
+  font-size: $font-size-base;
+  color: get-color(text, primary);
+}
+
+body {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body, h1, h2, h3, h4, figure {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Bebas', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 5rem;
+  @include tablet {
+    font-size: 60px;
+  }
+}
+
+h2 {
+  font-size: 4.125rem;
+  @include mobile {
+    font-size: 3.1rem;
+  }
+}
+
+h3 {
+  font-size: 2.75rem;
+}
+
+h4 {
+  font-size: 2.25rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+ul, ol {
+  padding-left: 1.2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+input, select {
+  background-color: white;
+}

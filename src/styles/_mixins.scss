@@ -1,0 +1,97 @@
+@import './variables';
+
+@mixin media-breakpoint-down($name, $breakpoints: $devices-width) {
+  $max: map-get($breakpoints, $name);
+  @if $max {
+    @media (max-width: $max - 1px) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@function breakpoint-infix($name) {
+  @return if($name == null, "", "-#{$name}");
+}
+
+@mixin mobile {
+  @media screen and (max-width: #{map-get($devices-width, sm) -  1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: #{map-get($devices-width, md) - 1px}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: #{map-get($devices-width, lg) - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{map-get($devices-width, lg)}) {
+    @content;
+  }
+}
+
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin absoluteVerticalCenter {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin btnResetDefault {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: 1rem;
+}
+
+@mixin row {
+  padding: $section-padding-default 10px;
+  position: relative;
+  @include tablet {
+    padding: $section-padding-mobile 2%;
+  }
+  @include tablet {
+    padding: $section-padding-mobile 20px;
+  }
+}
+
+@mixin sectionContent {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  @include laptop {
+    width: 80%;
+  }
+  @include tablet {
+    width: 100%;
+  }
+}
+
+@mixin contentWrapper($max-width: 1200px) {
+  max-width: $max-width;
+  margin: 0 auto;
+  position: static;
+  padding: 0 15px;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin image($val: 100%) {
+  width: $val;
+  display: block;
+}

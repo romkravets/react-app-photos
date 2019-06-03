@@ -1,0 +1,12 @@
+.btn {
+  padding: 16px 30px;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  font-size: 1rem;
+  box-shadow: 0 0 10px 0px rgba(0,0,0,.5);
+  display: inline-block;
+  &_primary {
+    background: orange;
+  }
+}
