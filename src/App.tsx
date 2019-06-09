@@ -59,7 +59,7 @@ export class App extends React.Component<{}, IState> {
 
   public render() {
     return <div className={'page-container'}>
-      <Nav onSeacrh={this.search}/>
+      <Nav onSearch={this.search}/>
       <Grid {...this.state} />
       <Button onClick={this.loadImages}>Show more</Button>
     </div>;
