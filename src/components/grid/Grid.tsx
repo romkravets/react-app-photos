@@ -29,7 +29,6 @@ export class Grid extends React.PureComponent<IProps> {
         }
       </div>
       <div>Found: {total} items</div>
-      <Button>Show more</Button>
     </div>;
   }
 }

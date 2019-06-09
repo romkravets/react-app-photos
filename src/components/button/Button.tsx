@@ -7,6 +7,6 @@ interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
 }
 
-export const Button: React.FunctionComponent<IProps> = ({ children, className }) => {
-  return <button className={classnames('btn ', className)}>{ children }</button>
+export const Button: React.FunctionComponent<IProps> = ({ children, className, ...props }) => {
+  return <button className={classnames('btn ', className)} {...props}>{ children }</button>
 };
